@@ -12,6 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "jspdf": "^3.0.1",
+    "pdfjs-dist": "^5.1.91"
   }
 }
