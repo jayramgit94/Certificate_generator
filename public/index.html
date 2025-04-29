@@ -11,33 +11,52 @@
     <div class="container">
       <h1>Certificate Generator</h1>
 
-      <canvas id="certificateCanvas" width="800" height="600"></canvas>
+      <div class="certificate-wrapper">
+        <canvas id="certificateCanvas" width="800" height="600"></canvas>
+
+        <div class="email-form-container">
+          <form id="emailForm">
+            <input
+              type="text"
+              id="recipientName"
+              placeholder="Recipient Name"
+              required
+            />
+            <input
+              type="email"
+              id="recipientEmail"
+              placeholder="Recipient Email"
+              required
+            />
+            <button type="submit">Send Certificate via Email</button>
+          </form>
+        </div>
+      </div>
 
       <div class="buttons">
         <button id="prevBtn">⬅️ Previous</button>
         <button id="nextBtn">Next ➡️</button>
         <button id="downloadBtn">⬇️ Download Certificate</button>
-        <button id="downloadAllBtn">Generate and Download All Certificates</button>
+        <button id="downloadAllBtn">
+          Generate and Download All Certificates
+        </button>
         <button id="sendAllBtn">Send Certificates to All Users</button>
       </div>
     </div>
 
-    <form id="emailForm">
-      <input
-        type="text"
-        id="recipientName"
-        placeholder="Recipient Name"
-        required
-      />
-      <input
-        type="email"
-        id="recipientEmail"
-        placeholder="Recipient Email"
-        required
-      />
-      <button type="submit">Send Certificate via Email</button>
-    </form>
+    <button id="toggleDarkMode">🌙</button>
 
     <script src="js/script.js"></script>
+    <script>
+      // Dark Mode Toggle Script
+      const darkModeButton = document.getElementById("toggleDarkMode");
+      darkModeButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+      });
+    </script>
+
+    <div class="copyright">
+      <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+    </div>
   </body>
 </html>

@@ -33,7 +33,7 @@ app.post("/send-email", upload.single("certificate"), async (req, res) => {
         {
           From: {
             Email: "sangawatjayram@gmail.com",
-            Name: "Certificate Generator",
+            Name: "Jayram Sangawat",
           },
           To: [
             {

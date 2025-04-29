@@ -21,7 +21,7 @@ pdfjsLib.getDocument(pdfPath).promise.then((pdf) => {
 // Render PDF Page
 function renderPDFPage(pageNumber, callback) {
   pdfDoc.getPage(pageNumber).then((page) => {
-    const viewport = page.getViewport({ scale: 1.5 });
+    const viewport = page.getViewport({ scale: 4 });
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
@@ -49,7 +49,7 @@ function fetchUserData() {
 function drawCertificate(user) {
   renderPDFPage(1, () => {
     ctx.fillStyle = "#000";
-    ctx.font = "50px Georgia";
+    ctx.font = "150px Georgia";
     ctx.textAlign = "center";
 
     const nameY = canvas.height / 2 + 20;
@@ -64,7 +64,7 @@ function drawCertificate(user) {
 function generateCertificate(user, callback) {
   renderPDFPage(1, () => {
     ctx.fillStyle = "#000";
-    ctx.font = "50px Georgia";
+    ctx.font = "150px Georgia";
     ctx.textAlign = "center";
 
     const nameY = canvas.height / 2 + 20;
@@ -135,7 +135,7 @@ document.getElementById("sendAllBtn")?.addEventListener("click", () => {
     const user = users[i];
     renderPDFPage(1, () => {
       ctx.fillStyle = "#000";
-      ctx.font = "50px Georgia";
+      ctx.font = "150px Georgia";
       ctx.textAlign = "center";
 
       const nameY = canvas.height / 2 + 20;
@@ -188,7 +188,7 @@ document.getElementById("emailForm")?.addEventListener("submit", (e) => {
 
   renderPDFPage(1, () => {
     ctx.fillStyle = "#000";
-    ctx.font = "50px Georgia";
+    ctx.font = "150px Georgia";
     ctx.textAlign = "center";
 
     const nameY = canvas.height / 2 + 20;

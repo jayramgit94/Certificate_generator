@@ -21,7 +21,7 @@ yaml
 Copy
 Edit
 
----
+---  
 
 ## 📋 Sample users.json
 
